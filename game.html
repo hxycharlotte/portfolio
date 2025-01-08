@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Projects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-family: 'Lobster', cursive;
+            color: #401f1f;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+        .text {
+            margin-top: 20px;
+            color: #5e3434;
+            text-align: left;
+        }
+        .text h3, .text h6 {
+            color: #5e3434;
+        }
+        .video-container {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .video-container video {
+            width: 60%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .video-text {
+            margin-left: 20px;
+            flex: 1;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #2c3e50;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #f94a9e;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="game-title">// Game Projects</h1>   
 
+    <div class="button-container">
+        <a href="index.html" class="button">About ^-w-^ Me</a>
+    </div>
+   
+    <div class="container">
+        <div class="video-container">
+            <video controls>
+                <source src="videos/Space_Shooter.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-text">
+                <h3>Space Shooter: Stand-alone, Unity, C#</h3>
+                <h6>github: <a href="https://github.com/hxycharlotte/SpaceShooter" target="_blank" aria-label="Space_Shooter">https://github.com/hxycharlotte/SpaceShooter</a></h6>
+                <p> SpaceShooter: Game made with Unity, download "Space Shooter.exe" to play. Support Windows.
+                    
+                    This is a space shooter game independently developed using Unity. Players can choose between single-player or co-op (two-player) modes. The goal is to dodge enemy ships and their bullets while shooting back to score points. Scores and the high score are displayed in the top-left corner of the screen. Each game starts with three lives, shown in the top-right corner. Players can collect falling items like shields, advanced bullets, and speed boosts with their ship. Both modes support pausing the game with the "P" key. The game ends when the player dies, and they can press "R" to restart or return to the main menu.
+                    
+                    Controls:
+                    
+                    Single-player mode: Use ASWD or arrow keys to move the ship and the spacebar to shoot.
+                    Two-player mode: Player 1 uses ASWD to move and F to shoot; Player 2 uses JKIL to move and J to shoot. </p>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <video controls>
+                <source src="videos/Cat_Owner.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-text">
+                <h3>Where is my owner: Groupwork, Pygame, Python</h3>   
+                <h6>github: <a href="https://github.com/hxycharlotte/CatOwner" target="_blank" aria-label="Cat_Owner">https://github.com/hxycharlotte/CatOwner</a></h6>
+                <p> This is a side-scrolling adventure game developed by a 5-person team using Pygame. Players control a cat on a quest to find its owner by exploring the world, talking to strangers, avoiding hostile dogs and geese, and collecting clues. The cat is controlled using the arrow keys, and the spacebar is used to jump.
+
+                    In the team, I was responsible for story design, progress coordination, and coding key features, including the startup screen, the game-over restart functionality, and the cat’s life system. </p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-family: 'Lobster', cursive;
+            color: #2c503a;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .typing {
+            border-right: .15em solid #2c5040;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: blink-caret .75s step-end infinite;
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #2c5040; }
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #2c3e50;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .button:hover {
+            background-color: #f94a9e;
+        }
+        .nav-buttons {
+            visibility: hidden; /* Hide navigation buttons initially */
+        }
+    </style>
+</head>
+<body>
+    <h1>\\ Poetry</h1>
+    <div class="button-container">
+        <a href="index.html" class="button">About ^-w-^ Me</a>
+    </div>
+    <div class="container">
+        <p id="firstline" class="typing"></p>
+        <p id="secondline" class="typing"></p>
+        <p id="thirdline" class="typing"></p>
+        <p id="fourthline" class="typing"></p>
+        <p id="fifthline" class="typing"></p>
+        <p id="sixthline" class="typing"></p>
+        <p id="seventhline" class="typing"></p>
+        <p id="eighthline" class="typing"></p>
+        <p id="ninthline" class="typing"></p>
+        <p id="tenthline" class="typing"></p>
+        <p id="eleventhline" class="typing"></p>
+        <p id="twelfthline" class="typing"></p>
+        <p id="thirteenthline" class="typing"></p>
+        <p id="fourteenthline" class="typing"></p>
+        <p id="fifteenthline" class="typing"></p>
+        <p id="sixteenthline" class="typing"></p>
+        <p id="seventeenthline" class="typing"></p>
+        <p id="eighteenthline" class="typing"></p>
+        <p id="nineteenthline" class="typing"></p>
+    </div>
+    <div class="button-container nav-buttons" id="navigation-buttons">
+        <button id="previous-poetry" class="button">Previous Poetry</button>
+        <button id="next-poetry" class="button">Next Poetry</button>
+    </div>
 
+    <script>
+        const lines = [
+            { id: 'firstline', text: 'I like the sea in winter 我喜欢冬日的海' },
+            { id: 'secondline', text: 'It is that quiet and peaceful 是那样宁静' },
+            { id: 'thirdline', text: 'Like the unfrozen tide on horizon 仿佛地表未被冰冻的潮汐' },
+            { id: 'fourthline', text: 'The tide connect with your breathe 那潮汐与你的呼吸相连' },
+            { id: 'fifthline', text: 'Shadow the moon in the land of your heart 在内心投下月的光影' },
+            { id: 'sixthline', text: 'Solitude is the gift from freedom 独处是自由的馈赠' },
+            { id: 'seventhline', text: 'Which is paid by lonliness 用孤独偿还' },
+            { id: 'eighthline', text: 'But the eagle is not seagle 但苍鹰不是海鸥' },
+            { id: 'ninthline', text: 'Living without human food rubbish 不靠人类的生活垃圾乞食' },
+            { id: 'tenthline', text: 'Petrels flying in the storm 在风浪中飞翔的海燕' },
+            { id: 'eleventhline', text: 'Never mind how their wings broken in the past 并不在乎它们的翅膀曾经折断' },
+            { id: 'twelfthline', text: 'Because the past can not be changed 因为过去不会被改变' },
+            { id: 'thirteenthline', text: 'But the broken wings are coming stronger 但带着伤痕的翅膀会变得更有力量' },
+            { id: 'fourteenthline', text: 'Flying through the storm in mind 飞过内心的风浪' },
+            { id: 'fifteenthline', text: 'Vast earth and sky, with an unlimited universe 天地广阔，宇宙无垠' },
+            { id: 'sixteenthline', text: 'This will be the best revolution 这是最好的革命' },
+            { id: 'seventeenthline', text: 'The revolution of spiritual 内心的革命' },
+            { id: 'eighteenthline', text: 'And all the sounds will go back to sea 而一切终将归于大海' },
+            { id: 'nineteenthline', text: 'The sea in winter 冬日的海' }
+        ];
+
+        const newLines = [
+            { id: 'firstline', text: 'This is only some sentences rather poetry 这不是诗，只是一些句子' },
+            { id: 'secondline', text: 'And some light floating in mind like stars 一些如星尘般浮动在脑海中的光' },
+            { id: 'thirdline', text: 'I try to catch their shadow我试图抓住它们的影子' },
+            { id: 'fourthline', text: 'But only end up with some sorrow 却只得到一些怅然' },
+            { id: 'fifthline', text: 'Last night, you cry whole night 上一个夜晚，你彻夜痛哭' },
+            { id: 'sixthline', text: 'Feel like the red army walking from snow mountains 好像红军从雪地中走来' },
+            { id: 'seventhline', text: 'Finishing your own 2500-kilometre march in mind 在心中走过了你的两万五千里长征' },
+            { id: 'eighthline', text: 'You may not be lucky enough to win the victor 也许你没有足够的幸运迎来胜利' },
+            { id: 'ninthline', text: ' But you can still choose this moment 但是你依然能选择在此刻' },
+            { id: 'tenthline', text: 'Give yourself on grass with cloud and moon 一个人躺在草地上，看云看月亮' },
+            { id: 'eleventhline', text: 'This is a gift from destiny 这是上天的恩赐' },
+            { id: 'twelfthline', text:'Because 因为' },
+            { id: 'thirteenthline', text: 'The life is shining present, rather process “生命是闪耀的此刻，不是过程”'},
+            { id: 'fourteenthline', text: 'As the real beauty does not need a path “就像芳香不需要道路一样”' },
+
+        ];
+
+        let currentLine = 0;
+        let currentChar = 0;
+        const typingSpeed = 50; // Adjust typing speed here
+
+        function type(linesArray) {
+            if (currentLine < linesArray.length) {
+                const lineElement = document.getElementById(linesArray[currentLine].id);
+                if (currentChar < linesArray[currentLine].text.length) {
+                    lineElement.textContent += linesArray[currentLine].text.charAt(currentChar);
+                    currentChar++;
+                    setTimeout(() => type(linesArray), typingSpeed);
+                } else {
+                    lineElement.style.borderRight = 'none'; // Remove the caret after typing is done
+                    currentLine++;
+                    currentChar = 0;
+                    setTimeout(() => type(linesArray), typingSpeed);
+                }
+            } else {
+                // Show the navigation buttons after all typing is done
+                document.getElementById('navigation-buttons').style.visibility = 'visible';
+            }
+        }
+
+        document.getElementById('next-poetry').addEventListener('click', () => {
+            // Clear all lines
+            lines.forEach(line => {
+                document.getElementById(line.id).textContent = '';
+            });
+            // Reset typing variables
+            currentLine = 0;
+            currentChar = 0;
+            // Hide the navigation buttons
+            document.getElementById('navigation-buttons').style.visibility = 'hidden';
+            // Start typing new lines
+            type(newLines);
+        });
+
+        document.getElementById('previous-poetry').addEventListener('click', () => {
+            // Clear all lines
+            newLines.forEach(line => {
+                document.getElementById(line.id).textContent = '';
+            });
+            // Reset typing variables
+            currentLine = 0;
+            currentChar = 0;
+            // Hide the navigation buttons
+            document.getElementById('navigation-buttons').style.visibility = 'hidden';
+            // Start typing the initial lines
+            type(lines);
+        });
+
+        // Start typing the initial lines
+        type(lines);
+    </script>
+</body>
+</html>

@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlotte_Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-family: 'Lobster', cursive;
+            color: #2c3e50;
+            text-align: center;
+            margin: 20px 20;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .text {
+            margin-top: 20px;
+            color: #34495e;
+            text-align: left;
+        }
+        .text h3, .text h6 {
+            color: #34495e;
+            text-align: left;
 
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #2c3e50;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #f94a9e;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        @media (min-width: 600px) {
+            .container {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .text {
+                margin-left: 20px;
+                text-align: left;
+            }
+        }
+        @keyframes moveCat {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(50%); }
+            100% { transform: translateX(-50%); }
+        }
+        .moving-cat {
+            display: inline-block;
+            animation: moveCat 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="my-name">// Charlotte Huang \\</h1>
+    <div class="button-container">
+        <a href="CV.pdf" target="_blank" class="button">Download CV</a>
+    </div>
+
+    <div class="container">
+        <img src="images/charlotte.jpg" alt="Charlotte Huang" width="400" height="430">
+        <div class="text">
+            <p> Hi! I am a PhD candidate in Computer Science at Cardiff University, focusing on Eudaemonic Computing. </p>
+            <p> Eudaemonism for me is cat, poetry, coding, art, and music. </p>
+            <header>
+                <h3 id="game-label" style="cursor: pointer;"> | GAME </h3>
+                <h3 id="art-label" style="cursor: pointer;"> | ART </h3>
+                <h3 id="poetry-label" style="cursor: pointer;"> | POETRY </h3>
+                <h3 id="music-label" style="cursor: pointer;"> | MUSIC </h3>       
+            </header>
+            <p> Happy to connect and share the joy of coding for wellbeing! </p>
+            <h6> Email: <a href="mailto:xinyuhci@gmail.com" aria-label="Email Charlotte">xinyuhci@gmail.com</a></h6>
+            <h6> Linkedin: <a href="http://linkedin.com/in/xinyucharlottehuang" target="_blank" aria-label="LinkedIn Profile">http://linkedin.com/in/xinyucharlottehuang</a></h6>
+            <h6> Github: <a href="https://github.com/hxycharlotte" target="_blank" aria-label="GitHub Profile">https://github.com/hxycharlotte</a></h6>
+            <h6> Instagram: <a href="https://www.instagram.com/superluckycharlotteeey" target="_blank" aria-label="Instagram Profile">@superluckycharlotteeey</a></h6>  
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('my-name').addEventListener('mouseover', function() {
+            this.innerHTML = '<span class="moving-cat">🐱🐱🐱</span>';
+        });
+        document.getElementById('my-name').addEventListener('mouseout', function() {
+            this.textContent = '__=^Charlotte^=__Xinyu Huang__/ ';
+        });
+        document.getElementById('game-label').addEventListener('mouseover', function() {
+            this.style.color = 'red';
+        });
+        document.getElementById('game-label').addEventListener('mouseout', function() {
+            this.style.color = '';
+        });
+        document.getElementById('game-label').addEventListener('click', function() {
+            window.location.href = 'game.html';
+        });
+
+        document.getElementById('art-label').addEventListener('mouseover', function() {
+            this.style.color = 'orange';
+        });
+        document.getElementById('art-label').addEventListener('mouseout', function() {
+            this.style.color = '';
+        });
+        document.getElementById('art-label').addEventListener('click', function() {
+            window.location.href = 'art.html';
+        });
+
+        document.getElementById('poetry-label').addEventListener('mouseover', function() {
+            this.style.color = 'lightgreen';
+        });
+        document.getElementById('poetry-label').addEventListener('mouseout', function() {
+            this.style.color = '';
+        });
+        document.getElementById('poetry-label').addEventListener('click', function() {
+            window.location.href = 'poetry.html';
+        });
+
+        document.getElementById('music-label').addEventListener('mouseover', function() {
+            this.style.color = 'skyblue';
+        });
+        document.getElementById('music-label').addEventListener('mouseout', function() {
+            this.style.color = '';
+        });
+        document.getElementById('music-label').addEventListener('click', function() {
+            window.location.href = 'music.html';
+        });
+    </script>
+
+</body>
+</html>
